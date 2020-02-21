@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+  
+
+
+			<!-- 			<div th:fragment="platform-left-menu" class="col-lg-4">
+							<div class="sticky-top">
+							<div class="row">
+					
+									<div class="col-lg-12 col-md-6">
+										<div class="widget bg-white p-lr20 p-t20  widget_getintuch radius-sm">
+																		
+											<a class="text-black font-weight-700 p-t10 m-b15">Welcome to</a>
+											<h4 class="text-black font-weight-700 p-t10 m-b15">249 Startups</h4>
+											<ul>
+						
+						<li>Join our platform as
+						<a th:href="'/Form_v_1.0/TalentController/addTalent'" class="dez-page">Talent </a>or
+						<a th:href="'/Form_v_1.0/StartupController/addStartup'" class="dez-page"> Startup </a>or
+						<a th:href="'/Form_v_1.0/InvestorController/addInvestor'" class="dez-page"> Investor</a>
+					
+</li>
+<th:span th:if="${userType}=='platformuser'">
+						<li><strong>Login As : </strong><a th:text="${userName}" class="dez-page"></a></li>	
+						<li><strong>Last Login At : </strong><a th:text="${lastLoginTime}" class="dez-page"></a></li>
+									<li>
+<a th:href="@{'/logout'}">Logout</a>
+   
+							</li>	
+	
+	 				
+	<th:span th:each="link : ${linkKeys}">												
+ <li><a th:href="${links.get(link)}" th:text="${link}" class="dez-page"></a></li>
+	</th:span>	
+	</th:span>				
+</ul>
+										
+
+										</div>
+									
+
+								
+								</div>
+                            </div>
+						</div>
+						</div> -->
+				
+				
+							
+												<div th:fragment="platform-body-add" class="col-lg-8">
+							<div class="job-info-box">
+											<h5 class="font-weight-600" th:text="${title}"></h5>		
+								<th:span th:each="message : ${messages}">
+							<h5 class="font-weight-600" th:text="${message}"></h5>
+							</th:span>
+					
+						
+							
+						<form enctype="multipart/form-data" th:action="'/Form_v_1.0/'+${controllerName}+'/submit'+${operation}+${beanName}+'?id='+${bean.id}"
+							method="post" th:object="${bean}">
+				<input hidden="hidden" id="oldBean" name="oldBean" th:value="${oldBean}"></input>
+<!-- 										
+<th:span th:if="${list}!=null">
+<select th:name="${bean.packageName}" multiple="multiple">
+
+
+								<th:span th:each="option : ${list}">
+																<option th:text="${option.resourceName}"></option>
+										</th:span>
+									
+											</select>
+												</th:span> -->
+							<th:span th:each="field : ${fields}">
+						<th:span th:if="${field.type}=='link'">
+						<div class="form-group">
+										<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+						<th:span th:each="option : ${field.options}">
+							<a th:href="@{'/StartupController/getStartup?id='+${option.id}}" class="dez-page" th:text="${option.field1}" th:disabled="${field.enabledFor}"></a>
+							</th:span>
+							</div>
+							</th:span>
+					
+					<th:span th:if="${field.type}=='file'">
+							<div class="form-group">
+								<!-- <th:span th:each="i : ${#numbers.sequence( 1, field.boxSize)}" > -->
+										<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+							 <div class="col-sm-12 form-group"> 
+                               <!--   <label>Upload Your CV, make sure CV file name is in English</label> -->
+                                  <input type="file" name="files" id="fileToUpload" multiple="multiple" th:disabled="${field.enabledFor}"></input>   
+                                </div>  
+                               <!--  </th:span> -->
+                            </div>
+                            
+                            </th:span>    
+                                
+<!-- 		<th:span th:if="${field.type}=='select'">
+		<div>
+											<label th:text="#{${beanName}+'.'+${field.nameEng}+'.title'}"></label>
+
+																			
+<select id="mySelect" th:field="*{__${field.nameEng}__}" multiple="multiple" th:disabled="${field.enabledFor}">
+<option selected="selected" th:value="${bean.__${field.nameEng}__}" th:text="${bean.__${field.nameEng}__}"></option>
+<th:span th:if="${bean.__${field.nameEng}__}!= null">
+<option selected="selected" th:text="${bean.__${field.nameEng}__}" th:value="${bean.__${field.nameEng}__}"></option>
+</th:span>
+<th:span th:if="${field.accessedBy}=='yes'">
+								<th:span th:each="option : ${field.options}">
+																<option th:name="resources" th:text="${option.id}"></option>
+										</th:span>
+										</th:span>
+											</select>
+											
+
+
+											</div>
+										</th:span> -->
+										
+		<th:span th:if="${field.type}=='select'">
+			<div class="form-group">
+		<div>
+											<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+		<!-- multiple="multiple" -->
+		<select id="mySelect" th:field="*{__${field.name}__}" th:multiple="${field.multiple}" th:disabled="${field.enabledFor}">
+<!-- <option selected="selected" th:value="${bean.__${field.nameEng}__}" th:text="${bean.__${field.nameEng}__}"></option> -->
+<th:span th:if="${bean.__${field.name}__}!= null">
+<option selected="selected" th:text="${bean.__${field.name}__}" th:value="${bean.__${field.name}__}"></option>
+</th:span>
+<!-- <th:span th:if="${field.accessedBy}=='yes'">
+								<th:span th:each="option : ${field.options}">
+																<option th:name="resources" th:text="${option.id}"></option>
+										</th:span>
+										</th:span>
+											</select>
+								
+<select id="mySelect" name="resources"  th:field="*{__${field.nameEng}__}">
+ -->
+ <th:span th:if="${field.accessedBy}=='yes'">
+<!-- <option selected="selected" th:text="${bean.status}"></option> -->
+<th:span th:if="${field.items}!=null">
+								<th:span th:each="item : ${field.items}">
+																<option th:name="${field.name}" th:text="${item}"></option>
+										</th:span>
+										</th:span>
+											<th:span th:if="${field.options}!=null">
+																		<th:span th:each="option : ${field.options}">
+																	<th:span th:if="${beanName}=='Package'">
+																<option th:name="${field.name}" th:value="${option.id}" th:text="${option.resourceName}"></option>
+																</th:span>
+										</th:span>
+										</th:span>
+										</th:span>
+											</select>
+									<!-- 		<input type="button" onclick="disable()" value="Disable list"></input>
+<input type="button" onclick="enable()" value="Enable list"></input> -->
+											</div>
+											</div>
+										</th:span>
+										
+										<th:span th:if="${field.type}=='textArea'">
+										<textarea  th:disabled="${field.enabledFor}" th:field="*{__${field.saveInField}__}" rows="5" cols="30" class="form-control" maxlength="900"></textarea>
+										</th:span> 
+								<th:span th:if="${field.type}=='text'">
+									<div class="form-group">
+										<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+
+										<input id="mySelect" th:required="${field.required}"
+											th:field="*{__${field.name}__}"
+											th:name="${'bean'}" type="text"
+											class="form-control" maxlength="100" th:disabled="${field.enabledFor}" th:pattern="${field.regExpr}" oninput="setCustomValidity('')" oninvalid="setCustomValidity('Please insert a valid value')"></input>
+										<!-- required="required" -->
+									</div>
+								</th:span>
+
+								<th:span th:if="${field.type}=='date'">
+									<div class="form-group">
+										<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+
+										<input id="mySelect" th:required="${field.required}"
+											th:field="*{__${field.name}__}"
+											th:name="${'bean'}" type="date"
+											class="form-control" maxlength="100" th:disabled="${field.enabledFor}" th:pattern="${field.regExpr}" oninput="setCustomValidity('')" oninvalid="setCustomValidity('Please insert a valid value')"></input>
+										<!-- required="required" -->
+									</div>
+								</th:span>
+								
+							</th:span>
+
+<th:span th:if="${operation}=='Add'">
+							<button type="submit" class="site-button" id="btnContactUs"
+								onclick="clicked()" th:text="'Create'"></button>
+							<p id="demo"></p>
+							</th:span>
+		<th:span th:if="${operation}=='Update'">
+							<button type="submit" class="site-button" id="btnContactUs"
+								onclick="clicked()" th:text="'Update'"></button>
+							<p id="demo"></p>
+							</th:span>					
+							
+							
+						</form>							
+</div>
+						</div>
+					<div th:fragment="platform-body-view-get" class="col-lg-8">
+							<div class="job-info-box">
+								<h5 class="font-weight-600" th:text="${beanName} + ' Profile'"></h5>		
+								<th:span th:each="message : ${messages}">
+							<h5 class="font-weight-600" th:text="${message}"></h5>
+							</th:span>
+						<form th:action="'/Form_v_1.0/'+${controllerName}+'/submitUpdate'+${beanName}+'?id='+${bean.id}"
+							method="post" th:object="${bean}">
+							
+<input hidden="hidden" id="oldBean" name="oldBean" th:value="${oldBean}"></input>
+							<th:span th:each="field : ${fields}">
+								<th:span th:if="${field.type}=='link'">
+						<div class="form-group">
+										<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+						<th:span th:each="option : ${field.options}">
+							<a th:href="@{'/'+${field.List}+'Controller/get'+${field.List}+'?id='+${option.id}}" class="dez-page" th:text="${option.field1}"></a>
+							</th:span>
+							</div>
+							</th:span>
+		<th:span th:if="${field.type}=='select'">
+			<div class="form-group">
+		<div>
+		<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+		<!-- multiple="multiple" -->
+		<select id="mySelect" th:field="*{__${field.name}__}" th:multiple="${field.multiple}" th:disabled="${field.enabledFor}">
+<!-- <option selected="selected" th:value="${bean.__${field.nameEng}__}" th:text="${bean.__${field.nameEng}__}"></option> -->
+<th:span th:if="${bean.__${field.name}__}!= null">
+<option selected="selected" th:text="${bean.__${field.name}__}" th:value="${bean.__${field.name}__}"></option>
+</th:span>
+<!-- <th:span th:if="${field.accessedBy}=='yes'">
+								<th:span th:each="option : ${field.options}">
+																<option th:name="resources" th:text="${option.id}"></option>
+										</th:span>
+										</th:span>
+											</select>
+								
+<select id="mySelect" name="resources"  th:field="*{__${field.nameEng}__}">
+ -->
+ <th:span th:if="${field.accessedBy}=='yes'">
+<!-- <option selected="selected" th:text="${bean.status}"></option> -->
+<th:span th:if="${field.items}!=null">
+								<th:span th:each="item : ${field.items}">
+																<option th:name="${field.name}" th:text="${item}"></option>
+										</th:span>
+										</th:span>
+											<th:span th:if="${field.options}!=null">
+																		<th:span th:each="option : ${field.options}">
+																		<th:span th:if="${beanName}=='Package'">
+																<option th:name="${field.name}" th:value="${option.id}" th:text="${option.resourceName}"></option>
+																</th:span>
+										</th:span>
+										</th:span>
+										</th:span>
+											</select>
+									<!-- 		<input type="button" onclick="disable()" value="Disable list"></input>
+<input type="button" onclick="enable()" value="Enable list"></input> -->
+											</div>
+											</div>
+										</th:span>
+										
+<th:span th:if="${field.type}=='textArea'">
+										<textarea  th:disabled="${field.enabledFor}" th:field="*{__${field.saveInField}__}" rows="5" cols="30" class="form-control" maxlength="900"></textarea>
+										</th:span> 
+								<th:span th:if="${field.type}=='text'">
+									<div class="form-group">
+										<div>
+										<!--  -->
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+								
+										<input th:disabled="${field.enabledFor}" required="required"
+											th:field="*{__${field.name}__}"
+											th:name="${'bean'}" type="text"
+											class="form-control" maxlength="100" th:pattern="${field.regExpr}" ></input>
+										<!-- required="required" -->
+									</div>
+								</th:span>
+								
+								
+								<th:span th:if="${field.type}=='date'">
+									<div class="form-group">
+										<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+
+										<input id="mySelect" th:required="${field.required}"
+											th:field="*{__${field.name}__}"
+											th:name="${'bean'}" type="date"
+											class="form-control" maxlength="100" th:disabled="${field.enabledFor}" th:pattern="${field.regExpr}" oninput="setCustomValidity('')" oninvalid="setCustomValidity('Please insert a valid value')"></input>
+										<!-- required="required" -->
+									</div>
+								</th:span>
+
+<th:span th:if="${field.type}=='file'">
+									<div class="form-group">
+										<div>
+											<label th:text="${field.nameEng}"></label>
+											</div>
+											<div>
+											<label th:text="${field.nameArb}"></label>
+										</div>
+								<a th:href="@{/products/download?fileName=${bean.__${field.name}__}}"><span th:text="${bean.__${field.name}__}"></span></a>
+									<!-- 	<input th:disabled="${field.enabledFor}" required="required"
+											th:field="*{__${field.nameEng}__}"
+											th:name="${'bean'}" type="text"
+											class="form-control" maxlength="100"></input> -->
+										<!-- required="required" -->
+									</div>
+								</th:span>
+								
+							</th:span>
+<!-- <th:span th:each="bean : ${innerBeans}">
+ <li><a th:href="'/Form_v_1.0/'+${innerBeanController}+'/get'+${innerBeanName}+'?id='+${bean.id}" th:text="${bean.field1}" class="dez-page"></a></li>
+</th:span> -->
+
+		<th:span th:if="${operation}=='Update'">
+							<button type="submit" class="site-button" id="btnContactUs"
+								onclick="clicked()" th:text="'Update'"></button>
+							<p id="demo"></p>
+							</th:span>		
+						</form>							
+</div>
+						</div>
+						
+	     <div th:fragment="platform-pager">
+ <!--    <div class= "form-group"> -->
+                    <form th:action="@{'listStartupTalents'}" method="get">
+                    	<th:span  th:if="${currentPage}!='1'">
+  <button name="left" type="submit" class="btn btn-lg -orange" id="btnContactUs">prev</button>
+                    	</th:span>
+                    	
+ <th:span  th:if="${currentPage}!=${nOfPages}">
+  <button name="right" type="submit" class="btn btn-lg -orange" id="btnContactUs">next</button>
+  <!--  <input name="right" type="hidden" value="   " class="rightSubmit" /> -->
+                    	<!-- <input type="hidden" name="right" value="next" class="next" /> -->
+                    	</th:span>
+                    	<div>Page <strong th:text="${currentPage}"></strong> of  <strong th:text="${nOfPages}"></strong>
+                    pages | Total <strong th:text="${nOfRecords}"></strong> records found
+              
+              	<input  type="hidden" th:value="${currentPage}" name="currentPage"/>
+               
+						
+						    
+   </div>
+     
+                    	</form>
+                    <!-- 	</div> -->
+     </div>
+
+</html>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+	<field>
+		<name>field1</name>
+		<nameEng>Full Name</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update,Summary</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>field1</saveInField>
+	</field>
+
+	<field>
+		<name>field2</name>
+		<nameEng>Email Address</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,Summary</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+				<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>field2</saveInField>
+	</field>
+
+	<field>
+		<name>field3</name>
+		<nameEng>Phone Number</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>field3</saveInField>
+	</field>
+
+	<field>
+		<name>field4</name>
+		<nameEng>Gender</nameEng>
+		<nameArb></nameArb>
+		<type>select</type>
+		<options>
+			<item>Female</item>
+			<item>Male</item>
+		</options>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>field4</saveInField>
+	</field>
+
+	<field>
+		<name>field5</name>
+		<nameEng>Education</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+			<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+			<regExpr></regExpr>
+		<required></required>
+		<saveInField>field5</saveInField>
+	</field>
+	<field>
+		<name>field6</name>
+		<nameEng>Current Occupation</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>field6</saveInField>
+	</field>
+
+	<field>
+		<name>field7</name>
+		<nameEng>Residence</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+	<regExpr></regExpr>
+		<required></required>
+		<saveInField>field7</saveInField>
+	</field>
+	<field>
+		<name>field8</name>
+		<nameEng>Do you have any disability?</nameEng>
+		<nameArb></nameArb>
+		<type>select</type>
+		<options>
+			<item>No</item>
+			<item>Yes</item>
+		</options>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>field8</saveInField>
+	</field>
+
+	<field>
+		<name>field9</name>
+		<nameEng>Disability Details</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<saveInField>field9</saveInField>
+	</field>
+
+	<field>
+		<name>field10</name>
+		<nameEng>Facebook</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+	<regExpr></regExpr>
+		<saveInField>field10</saveInField>
+	</field>
+
+	<field>
+		<name>field11</name>
+		<nameEng>Twitter</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+	<regExpr></regExpr>
+		<saveInField>field11</saveInField>
+	</field>
+	<field>
+		<name>field12</name>
+		<nameEng>LinkedIn</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<saveInField>field12</saveInField>
+	</field>
+
+<!-- 	<field>
+		<name>field13</name>
+		<nameEng>CV</nameEng>
+		<nameArb>السيرة الذاتية</nameArb>
+		<type>بهمث</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<saveInField>field13</saveInField>
+	</field> -->
+
+	<field>
+		<name>field26</name>
+		<nameEng>Date of Birth</nameEng>
+		<nameArb>تاريخ الميلاد</nameArb>
+		<type>date</type>
+		<useAs>Add,View,Update</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+			<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin,ProfileOwner
+		</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>field26</saveInField>
+	</field>
+
+	<field>
+		<name>field13</name>
+		<nameEng>Insert Your User Name</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin
+		</accessedBy>
+		<regExpr>[a-zA-Z0-9]{1,20}</regExpr>
+		<required></required>
+		<saveInField>field13</saveInField>
+	</field>
+
+	<field>
+		<name>field14</name>
+		<nameEng>Insert Your Passowrd</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+			<enabledFor>all,myrole,anonymousUser</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin
+		</accessedBy>
+		<regExpr>[a-zA-Z0-9]{1,20}</regExpr>
+		<required></required>
+		<saveInField>field14</saveInField>
+	</field>
+	<field>
+		<name>field15</name>
+		<nameEng>Confirm Your Password</nameEng>
+		<nameArb></nameArb>
+		<type>text</type>
+		<useAs>Add,View</useAs>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>all,myrole,anonymousUser</enabledFor>
+		<accessedBy>all,myrole,anonymousUser,PlatformAdmin
+		</accessedBy>
+		<regExpr>[a-zA-Z0-9]{1,20}</regExpr>
+		<required></required>
+		<saveInField>field15</saveInField>
+	</field>
+
+	<field>
+		<name>status</name>
+		<nameEng>status</nameEng>
+		<nameArb></nameArb>
+		<type>select</type>
+		<useAs>View,Update,Summary</useAs>
+		<options>
+			<item>active</item>
+			<item>closed</item>
+		</options>
+		<boxSize>30</boxSize>
+		<maxLength>30</maxLength>
+		<enabledFor>PlatformAdmin</enabledFor>
+		<accessedBy>all,PlatformAdmin,ProfileOwner</accessedBy>
+		<regExpr></regExpr>
+		<required></required>
+		<saveInField>status</saveInField>
+	</field>
+	<!--<field> <nameEng>startups</nameEng> <nameArb></nameArb> <List>Startup</List> 
+		<type>link</type> <useAs>Add,View,Update</useAs> <boxSize>30</boxSize> <maxLength>30</maxLength> 
+		<enabledFor>all,myrole,anonymousUser,ProfileOwner</enabledFor> <accessedBy>all,myrole,anonymousUser,ProfileOwner</accessedBy> 
+		<regExpr></regExpr> <required></required> <saveInField>startups</saveInField> 
+		</field> <field> <nameEng>connect</nameEng> <nameArb></nameArb> <type>select</type> 
+		<useAs>View,Update,Summary</useAs> <multiple></multiple> <options> <item>active</item> 
+		<item>closed</item> </options> <boxSize>30</boxSize> <maxLength>30</maxLength> 
+		<enabledFor>Admin,StartupAdmin</enabledFor> <accessedBy>anonymousUser,Admin,StartupAdmin</accessedBy> 
+		<regExpr></regExpr> <required></required> <saveInField>connect</saveInField> 
+		</field> -->
+
+</fields>

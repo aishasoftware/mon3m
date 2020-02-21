@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+    <field>
+				<name>programName</name>
+				<nameEng>Program Name</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+							<useAs>Add,View</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all,PlatformAdmin</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>programName</saveInField>
+			</field>
+			
+		    <field>
+		    	<name>description</name>
+				<nameEng>Description</nameEng>
+				<nameArb>ما اسم شركتك؟</nameArb>
+				<type>text</type>
+							<useAs>Add,View</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all,PlatformAdmin</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>description</saveInField>
+			</field>
+
+<field>
+<name>startTime</name>
+				<nameEng>startTime</nameEng>
+				<nameArb></nameArb>
+				<type>date</type>
+							<useAs>Add,View</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all,PlatformAdmin</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>startTime</saveInField>
+			</field>			
+<field>
+				<name>endTime</name>
+				<nameEng>endTime</nameEng>
+				<nameArb></nameArb>
+				<type>date</type>
+				<useAs>Add,View</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all,PlatformAdmin</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>endTime</saveInField>
+			</field>
+			
+			<field>
+				<name>investorId</name>
+				<nameEng>Invesor ID</nameEng>
+				<nameArb></nameArb>
+				<type>text</type>
+							<useAs>View</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>investorId</saveInField>
+			</field>
+			
+			<field>
+			<name>status</name>
+				<nameEng>status</nameEng>
+				<nameArb></nameArb>
+				<type>select</type>
+				<useAs>View,Update</useAs>
+				<multiple></multiple>
+				<options>
+				<item>active</item>
+			    <item>closed</item>
+				</options>
+				<boxSize>30</boxSize>	
+                <maxLength>30</maxLength>					
+		<enabledFor>Admin,StartupAdmin,PlatformAdmin</enabledFor>
+				<accessedBy>anonymousUser,Admin,StartupAdmin,PlatformAdmin</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>status</saveInField>
+			</field>		
+			<!-- <field>
+				<nameEng>appFile1</nameEng>
+				<nameArb></nameArb>
+				<type>file</type>
+				<useAs>add,view</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>appFile1</saveInField>
+			</field>
+			
+			<field>
+				<nameEng>appFile2</nameEng>
+				<nameArb></nameArb>
+				<type>file</type>
+				<useAs>add,view</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>appFile2</saveInField>
+			</field>
+			
+			<field>
+				<nameEng>appFile3</nameEng>
+				<nameArb></nameArb>
+				<type>file</type>
+				<useAs>add,view</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>appFile3</saveInField>
+			</field>
+			
+			<field>
+				<nameEng>appFile4</nameEng>
+				<nameArb></nameArb>
+				<type>file</type>
+				<useAs>add,view</useAs>
+				<boxSize>3</boxSize>	
+                <maxLength>30</maxLength>					
+				<enabledFor>myrole,anonymousUser,Admin,all</enabledFor>
+				<accessedBy>myrole,anonymousUser,Admin,all</accessedBy>
+				<regExpr></regExpr>
+				<required></required>
+				<saveInField>appFile4</saveInField>
+			</field> -->
+			</fields>
